@@ -26,4 +26,29 @@ body('password','Incorrect Password').isLength({min:5})]
     }
 })
 
+router.post("/loginuser",[
+    body('email').isEmail(),
+    body('password','Incorrect Password').isLength({min:5})]
+     ,async (req, res) => {
+        const errors=validationResult(req);
+        if(!errors.isEmpty()){
+            return res.status(400).json({errors: errors.array()});
+        }
+        let email =req.body.email;
+        try {
+            let userData= await User.findOne({email});
+            if(!userData){
+                return res.status(400).json({errors:"try login with correct credentials"})  
+            }
+
+            if(req.body.password !== userData.password){
+                return res.status(400).json({errors:"try login with correct credentials"})  
+            }
+            return res.json({ success: true });
+        } catch (error) {
+            console.error('Error login user:', error);
+            res.json({ success: false, error: error.message }); 
+        }
+    })
+
 module.exports = router;
