@@ -51,8 +51,12 @@ const mongoDb = async () => {
 
     // Get reference to the collection "foodData2" and fetch data
     const fetch_data = await mongoose.connection.db.collection("foodData2").find({}).toArray()
-
-    console.log("fetch_data");
+    
+    const foodCategory=await mongoose.connection.db.collection("foodCategory").find({}).toArray()
+    // console.log(foodCategory);
+    global.food_items=fetch_data;
+    global.foodCategory=foodCategory;
+    // console.log(food_items);
     
   } catch (error) {
     console.error('Error connecting to MongoDB:', error.message);
