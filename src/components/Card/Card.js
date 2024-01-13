@@ -2,6 +2,11 @@ import React from 'react'
 import './card.css'
 
 const Card = ( props) => {
+  let options= props.options[0];
+  let priceoption = Object.keys(options);
+  console.log(priceoption);
+
+
   return (
     <div className="card">
                     <img src={props.img} alt="Pizza" className="card-image" />
@@ -18,8 +23,11 @@ const Card = ( props) => {
                                     })}
                                 </select>
                                 <select id="size" >
-                                    <option value="half">Half</option>
-                                    <option value="full">Full</option>
+                                    {priceoption.map((data)=>{
+                                        return <option key={data} value={data}>{data}</option>
+                                    })}
+                                    {/* <option value="half">Half</option>
+                                    <option value="full">Full</option> */}
                                 </select>
                                 <div>Total Price</div>
                                 {/* <label htmlFor="quantity">Total Price</label> */}
