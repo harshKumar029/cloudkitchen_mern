@@ -4,7 +4,7 @@ const router = express.Router();
 router.post('/foodData', async (req,res)=>{
     try { 
         if (global.food_items !== undefined) {
-            console.log(global.food_items);
+            // console.log(global.food_items);
             res.send([global.food_items,global.foodCategory]);
           } else {
             res.status(404).json({ success: false, error: 'Data not found' });

@@ -16,6 +16,7 @@
   }
   .logo a{
     text-decoration: none;
+    color: #fff;
   }
   .logo span{
     font-size: 2rem;
@@ -43,8 +44,10 @@
     background-color: #007bff;
     color: white;
   }
-  
-  .auth-buttons a + a {
+  .auth-buttons a {
     margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+    vertical-align: bottom;
   }
   
