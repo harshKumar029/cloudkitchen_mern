@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Mycart from "../../screen/Mycart/Mycart"
 import './nav.css';
 // import Shoppingbag from "../../../public/assets/img/shopping-bag.png"
 
@@ -10,6 +11,13 @@ const Navbar = () => {
     localStorage.removeItem("authToken");
     navigate("/login")
   }
+
+  const [isClicked, setIsClicked] = useState(true);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  }
+
   return (
     <nav className="navbar">
       <div className="logo">
@@ -42,9 +50,16 @@ const Navbar = () => {
         </div>
         :
         <div className="auth-buttons">
-          <Link className='bag' to="#">
-            <img className='bag' src="/assets/img/shopping-bag.png" alt="Shopping Bag" />
-          </Link>
+          {isClicked ? (
+              <Link className='bag' to="#" onClick={handleClick}>
+                <img className='bag' src="/assets/img/shopping-bag.png" alt="Shopping Bag" />
+              </Link>
+            ) : (
+              <>
+              <button onClick={handleClick} style={{backgroundColor:"#ff0000"}}>close</button>
+              <Mycart handleClick={handleClick}/>
+              </>
+            )}
           <Link to="/login" onClick={handellogout}>
             <button style={{backgroundColor:"#ff0000"}}>Logout</button>
           </Link>

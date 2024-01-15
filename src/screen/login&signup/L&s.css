@@ -71,5 +71,8 @@ form {
     margin-left: 5px;
     font-size: 1.1rem;
   }
+  .addtocart button:hover{
+    background-color: #5175b8;
+  }
   
   

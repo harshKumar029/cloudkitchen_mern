@@ -6,6 +6,7 @@ import './home.css'
 import Navbar from '../components/Navbarr/Navbarr'
 import Footer from '../components/Footer/Footer'
 import Card from '../components/Card/Card';
+import Mycart from './Mycart/Mycart';
 // import { search } from '../../backend/Routes/CreateUser';
 
 const Home = () => {
@@ -80,6 +81,7 @@ const Home = () => {
                         : <div>''''</div>
                 }
             </div>
+            {/* <div><Mycart/></div> */}
             <div><Footer /></div>
         </>
     )
