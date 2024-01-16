@@ -5,6 +5,7 @@ import Home from './screen/Home';
 import Login from './screen/login&signup/Login';
 import Signup from './screen/login&signup/Signup';
 import { CardProvider } from './components/Contextreducer';
+import MyOrder from './screen/MyOrder/MyOrder';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/createuser" element={<Signup />} />
-
+            <Route path='/myOrder' element={<MyOrder/>}/>
           </Routes>
         </BrowserRouter>
       </CardProvider>

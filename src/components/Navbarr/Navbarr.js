@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Mycart from "../../screen/Mycart/Mycart"
 import './nav.css';
+import { useCart } from '../Contextreducer';
 // import Shoppingbag from "../../../public/assets/img/shopping-bag.png"
 
 const Navbar = () => {
@@ -32,11 +33,11 @@ const Navbar = () => {
             </Link>
           </li>
           {(localStorage.getItem("authToken")) ?
-          <Link to="/">
-          My Order
-        </Link>
-        :""
-         }
+            <Link to="/myOrder">
+              My Order
+            </Link>
+            : ""
+          }
         </ul>
       </div>
       {(!localStorage.getItem("authToken")) ?
@@ -51,17 +52,17 @@ const Navbar = () => {
         :
         <div className="auth-buttons">
           {isClicked ? (
-              <Link className='bag' to="#" onClick={handleClick}>
-                <img className='bag' src="/assets/img/shopping-bag.png" alt="Shopping Bag" />
-              </Link>
-            ) : (
-              <>
-              <button onClick={handleClick} style={{backgroundColor:"#ff0000"}}>close</button>
-              <Mycart handleClick={handleClick}/>
-              </>
+            <Link className='bag' to="#" onClick={handleClick}>
+              <img className='bag' src="/assets/img/shopping-bag.png" alt="Shopping Bag" />
+            </Link>
+          ) : (
+            <>
+              <Mycart handleClick={handleClick} />
+              {/* <section>{console.log(data.length)}</section> */}
+            </>
             )}
           <Link to="/login" onClick={handellogout}>
-            <button style={{backgroundColor:"#ff0000"}}>Logout</button>
+            <button style={{ backgroundColor: "#ff0000" }}>Logout</button>
           </Link>
         </div>
       }

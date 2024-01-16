@@ -21,10 +21,7 @@ export default function Mycart({ handleClick }) {
 
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
-    // console.log(data,localStorage.getItem("userEmail"),new Date())
-    let response = await fetch("http://localhost:5000/api/auth/orderData", {
-      // credentials: 'include',
-      // Origin:"http://localhost:3000/login",
+    let response = await fetch("http://localhost:5000/api/orderData", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -35,7 +32,7 @@ export default function Mycart({ handleClick }) {
         order_date: new Date().toDateString()
       })
     });
-    console.log("JSON RESPONSE:::::", response.status)
+
     if (response.status === 200) {
       dispatch({ type: "DROP" })
     }
@@ -44,8 +41,7 @@ export default function Mycart({ handleClick }) {
   let totalPrice = data.reduce((total, food) => total + food.price, 0)
   return (
     <div className='cart-container'>
-
-      {console.log(data)}
+      
       <div className='cart-container'>
       <div className='cart-header'>
         <h2>Your Shopping Cart</h2>
@@ -78,7 +74,7 @@ export default function Mycart({ handleClick }) {
         </table>
         <div className='cart-total'><h1 className='fs-2'>Total Price: {totalPrice}/-</h1></div>
         <div className='cart-total'>
-          <button className='btn bg-success mt-5 ' onClick={handleCheckOut} > Check Out </button>
+          <button className='  ' onClick={handleCheckOut} > Check Out </button>
         </div>
       </div>
 

@@ -11,6 +11,9 @@ const reducer = (state, action) => {
             let newArr = [...state]
             newArr.splice(action.index, 1)
             return newArr;
+        case "DROP":
+            let empArr =[]
+            return empArr;
         default:
             console.log('error in reducer');
             return state; // Make sure to return the state in the default case.

@@ -26,6 +26,7 @@ const Login = () => {
             alert("Enter valid credentials")
         }
         if(json.success){
+            localStorage.setItem("userEmail",credentials.email);
             localStorage.setItem("authToken",json.authToken);
             console.log(localStorage.getItem("authToken"))
             navigate("/");
@@ -49,7 +50,7 @@ const Login = () => {
                 <input type="password" id="password" name="password" value={credentials.password} onChange={onChange} placeholder="Enter your password" required />
             </div>
             <div className='accbutton'>
-            <button type="submit">Sign Up</button>
+            <button type="submit">Log In</button>
             <Link to='/createuser' className="login" >i'm a new user.</Link>
             </div>
             </div>
