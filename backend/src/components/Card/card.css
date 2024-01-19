@@ -1,0 +1,57 @@
+/* PizzaCard.css */
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-title {
+    margin-bottom: 10px;
+  }
+  
+  .card-options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown {
+    margin-bottom: 15px;
+  }
+  .dropdown *{
+    display: inline;
+    margin-right: .9rem;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .addtocart{
+    text-align: center;
+  }
+  .addtocart button{
+    background-color: #2e5696; /* Green background color, adjust as needed */
+    color: white; /* White text color */
+    padding: 6px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+    margin-right: 10px;
+  }
+  
