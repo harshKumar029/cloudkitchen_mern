@@ -27,8 +27,8 @@ const Navbar = () => {
           <span>FastFood</span>
         </Link>
         <ul className="nav-links">
-          <li>
-            <Link to="/">
+          <li className='home'>
+            <Link  to="/">
               Home
             </Link>
           </li>
@@ -43,10 +43,10 @@ const Navbar = () => {
       {(!localStorage.getItem("authToken")) ?
         <div className="auth-buttons">
           <Link to="/login">
-            <button>Login</button>
+            <button className='butt1'>Login</button>
           </Link>
           <Link to="/createuser">
-            <button>Signup</button>
+            <button className='butt2'>Signup</button>
           </Link>
         </div>
         :
@@ -61,8 +61,8 @@ const Navbar = () => {
               {/* <section>{console.log(data.length)}</section> */}
             </>
             )}
-          <Link to="/login" onClick={handellogout}>
-            <button style={{ backgroundColor: "#ff0000" }}>Logout</button>
+          <Link  to="/login" onClick={handellogout}>
+            <button className='butt2' style={{ backgroundColor: "#ff0000" }}>Logout</button>
           </Link>
         </div>
       }
