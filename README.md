@@ -5,7 +5,7 @@ The Fast Food MERN App is a web application built using the MERN stack, allowing
 ![MERN](./public/assets/img/readme.png)
 
 ## Table of Contents
-Features
+## Features
 Technologies
 Installation
 Usage
