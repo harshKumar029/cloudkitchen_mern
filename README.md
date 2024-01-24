@@ -20,19 +20,24 @@ Browse Menu: Browse a variety of fast food items categorized by type.
 
 Ordering System: Add items to the cart and place orders.
 
-MY order: User can View their order history.
+My order: User can View their order history.
 
 ## Technologies
 
 ### Frontend:
 React: A JavaScript library for building user interfaces.
+
 Redux: State management for React applications.
+
 React Router: Navigation for React apps.
 
 ### Backend:
 Node.js: JavaScript runtime for server-side development.
+
 Express.js: Web application framework for Node.js.
+
 MongoDB: NoSQL database for storing application data.
+
 Mongoose: ODM (Object Data Modeling) library for MongoDB and Node.js.
 
 ### Authentication:
@@ -42,37 +47,42 @@ JSON Web Tokens (JWT): Securely transmit information between parties.
 Clone Repository:
 
 bash
+
 Copy code
-git clone https://github.com/your-username/fast-food-mern-app.git
-cd fast-food-mern-app
+
+git clone https://github.com/harshKumar029/cloudkitchen_mern.git
+
+open file location
+
 Install Dependencies:
 
 bash
+
 Copy code
+
 Install server dependencies
+
 npm install
 
 Install client dependencies
+
 npm install
 
 Start the server (from the server directory)
-npm start
+nodemon index
 
 Start the client (from the client directory)
-nodemon index
+
+npm start
+
 Visit http://localhost:3000 in your browser.
 
 ### Usage
-Register/Login:
+Register/Login:Create a new account or log in using existing credentials.
 
-Create a new account or log in using existing credentials.
-Browse Menu:
+Browse Menu:Explore the menu and add items to your cart.
 
-Explore the menu and add items to your cart.
-Place Order:
-
-Review your order in the cart and proceed to checkout.
-User Profile:
+Place Order:Review your order in the cart and proceed to checkout.
 
 ### Contributing
 Contributions are welcome! Please follow the contribution guidelines when submitting pull requests.
