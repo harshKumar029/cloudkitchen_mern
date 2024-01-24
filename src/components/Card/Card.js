@@ -4,7 +4,7 @@ import { useDispatchCart,useCart } from '../Contextreducer';
 
 
 const Card = ( props) => {
-     let options= props.options[0];
+     let options= props.options[0]; //GETTING PROPS DATA FROM HOME.JS
     let priceoption = Object.keys(options);
     let dispatch =useDispatchCart();
     let data=useCart();
