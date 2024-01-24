@@ -5,17 +5,22 @@ The Fast Food MERN App is a web application built using the MERN stack, allowing
 ![MERN](./public/assets/img/readme.png)
 
 ## Table of Contents
-## Features
-Technologies
-Installation
-Usage
-Contributing
+
+* [Features](#features)
+* [Technologies](#technologies)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+
 
 ## Features
 User Authentication: Users can create accounts, log in, and authenticate their sessions.
+
 Browse Menu: Browse a variety of fast food items categorized by type.
+
 Ordering System: Add items to the cart and place orders.
-User Profile: View and edit user profiles.
+
+MY order: User can View their order history.
 
 ## Technologies
 
