@@ -14,6 +14,8 @@ const Home = () => {
     const [foodCat, setFoodCat] = useState([])
     const [fooditem, setFooditem] = useState([])
 
+    // http://192.168.1.6:5000/api/orderData
+
     const loadData = async () => {
         let response = await fetch("http://localhost:5000/api/fooddata", {
             method: "post",

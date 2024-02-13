@@ -19,7 +19,9 @@ const Card = ( props) => {
       console.log(data);
        
   }
+
   let finalPrice =qty* parseInt(options[size]);
+  
   useEffect(()=>{
     setsize(priceRef.current.value)
   },[])
