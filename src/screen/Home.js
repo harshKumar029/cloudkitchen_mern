@@ -20,7 +20,7 @@ const Home = () => {
     // http://192.168.1.6:5000/api/orderData
 
     const loadData = async () => {
-        let response = await fetch("http://localhost:5000/api/fooddata", {
+        let response = await fetch("https://cloudkitchen-mern.vercel.app/api/fooddata", {
             method: "post",
             header: {
                 'content-Type': 'application/json'
@@ -28,6 +28,7 @@ const Home = () => {
 
         });
         response = await response.json();
+        console.log("bkjehfkb",response)
         // console.log(response[0],response[1])
         setFooditem(response[0]);
         setFoodCat(response[1]);
