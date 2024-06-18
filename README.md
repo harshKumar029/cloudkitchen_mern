@@ -2,7 +2,7 @@
 Description
 The Fast Food MERN App is a web application built using the MERN stack, allowing users to browse and order fast food items online.
 
-![MERN](./public/assets/img/readme.png)
+![MERN](./public/assets/img/readme.webp)
 
 ## Table of Contents
 

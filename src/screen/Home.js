@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import bun from '../assets/img/bun.webp'
+import pizza from '../assets/img/pizza.webp'
+import roll from '../assets/img/roll.webp'
 import './home.css'
 
 import Navbar from '../components/Navbarr/Navbarr'
@@ -40,13 +43,13 @@ const Home = () => {
             <div className="carousel-container">
             <Carousel showThumbs={false} infiniteLoop autoPlay className="carousel">
                 <div>
-                    <img src='https://source.unsplash.com/random/900x500/?burger' alt="Image 1" className="carousel-image" />
+                    <img  src={bun} alt="Image 1" className="carousel-image" />
                 </div>
                 <div>
-                    <img src='https://source.unsplash.com/random/900x500/?pastry' alt="Image 2" className="carousel-image" />
+                    <img  src={pizza} alt="Image 2" className="carousel-image" />
                 </div>
                 <div>
-                    <img src='https://source.unsplash.com/random/900x500/?roll' alt="Image 3" className="carousel-image" />
+                    <img  src={roll} alt="Image 3" className="carousel-image" />
                 </div>
             </Carousel>
             <div className="input-overlay">
