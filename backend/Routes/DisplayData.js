@@ -24,6 +24,7 @@ router.post('/foodData', async (req, res) => {
   try {
     const fetch_data = await mongoose.connection.db.collection("foodData2").find({}).toArray();
     const foodCategory = await mongoose.connection.db.collection("foodCategory").find({}).toArray();
+    console.log("data,",fetch_data,foodCategory)
 
     if (fetch_data.length > 0 && foodCategory.length > 0) {
       res.send([fetch_data, foodCategory]);
