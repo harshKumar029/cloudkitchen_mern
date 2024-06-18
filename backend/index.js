@@ -30,7 +30,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://fastfood-nu.vercel.app/");
+  res.setHeader("Access-Control-Allow-Origin", "https://fastfood-nu.vercel.app");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
