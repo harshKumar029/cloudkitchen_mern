@@ -85,4 +85,4 @@ Browse Menu:Explore the menu and add items to your cart.
 Place Order:Review your order in the cart and proceed to checkout.
 
 ### Contributing
-Contributions are welcome! Please follow the contribution guidelines when submitting pull requests.
+Contributions are welcome! Please follow the github contribution guidelines when submitting pull requests.
